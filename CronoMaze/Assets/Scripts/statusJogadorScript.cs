@@ -7,7 +7,7 @@ public class statusJogadorScript : MonoBehaviour
 {
     public Image barraVida;
     public TextMeshProUGUI vidaJogadorTexto;
-    public int maximoVidas = 100;
+    private int maximoVidas = 100;
     int vidasAtual;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +23,12 @@ public class statusJogadorScript : MonoBehaviour
         if(this.vidasAtual == 0){
             SceneManager.LoadScene("morreuScene");
         }
+    }
+
+    public void adicionaVida() {
+        this.vidasAtual = this.vidasAtual + 20;
+        this.vidasAtual = Mathf.Clamp(vidasAtual, 0, maximoVidas);
+        AtualizarUI();
     }
 
     void AtualizarUI()

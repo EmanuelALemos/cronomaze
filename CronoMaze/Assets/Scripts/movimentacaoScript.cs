@@ -8,11 +8,16 @@ public class movimentacaoScript : MonoBehaviour
     private Rigidbody rb;
     private bool caiu = false;
     private statusJogadorScript status;
+
+    private Vector3 posicaoSalva;
+    private bool salvouPosicao = false;
+    private Vector3 posicaoInicial;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         status = GetComponent<statusJogadorScript>();
+        posicaoInicial = transform.position;
     }
 
     // Update is called once per frame
@@ -39,8 +44,9 @@ public class movimentacaoScript : MonoBehaviour
             // this.gameObject.transform.position += Vector3.forward * velocidade; 
             transform.position += cameraForward * velocidade;
         }
-        if(caiu = false && transform.position.y < 0){
+        if(transform.position.y < 0 && caiu == false && salvouPosicao == true){
             status.removeVida();
+            transform.position = posicaoSalva;
             caiu = true;
         }
     }
@@ -53,5 +59,17 @@ public class movimentacaoScript : MonoBehaviour
         if(other.gameObject.tag.Equals("Fence") || other.gameObject.tag.Equals("Pillar")){
             rb.AddForce(Vector3.back*100);
         }
+    }
+
+    void OnTriggerEnter(Collider other){
+        if(other.gameObject.tag.Equals("medkit")){
+            status.adicionaVida();
+            Destroy(other.gameObject);
+        }
+    }
+
+    public void SalvarPosicaoAtual(Vector3 posicao){
+        posicaoSalva = posicao;
+        salvouPosicao = true;
     }
 }
