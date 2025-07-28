@@ -17,7 +17,7 @@ public class statusJogadorScript : MonoBehaviour
     }
 
     public void removeVida() {
-        this.vidasAtual = this.vidasAtual - 2;
+        this.vidasAtual = this.vidasAtual - 10;
         this.vidasAtual = Mathf.Clamp(vidasAtual, 0, maximoVidas);
         AtualizarUI();
         if(this.vidasAtual == 0){

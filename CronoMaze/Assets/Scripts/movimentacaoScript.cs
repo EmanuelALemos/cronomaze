@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class movimentacaoScript : MonoBehaviour
 {
-    public float velocidade = 0.05f;
+    float velocidade = 0.05f;
     public Transform cameraTransform;
     private Rigidbody rb;
     private bool caiu = false;
@@ -12,6 +12,8 @@ public class movimentacaoScript : MonoBehaviour
     private Vector3 posicaoSalva;
     private bool salvouPosicao = false;
     private Vector3 posicaoInicial;
+
+    public bool podeMover = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,6 +25,7 @@ public class movimentacaoScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!podeMover) return;
         if(Input.GetKey(KeyCode.A)){
             // this.gameObject.transform.position = this.gameObject.transform.position + Vector3.left * velocidade;
             this.gameObject.transform.Rotate(Vector3.up,-1f);
@@ -48,6 +51,9 @@ public class movimentacaoScript : MonoBehaviour
             status.removeVida();
             transform.position = posicaoSalva;
             caiu = true;
+        }
+        if(Input.GetKey(KeyCode.Escape)){
+            SceneManager.LoadScene("jogoPausadoScene");
         }
     }
 

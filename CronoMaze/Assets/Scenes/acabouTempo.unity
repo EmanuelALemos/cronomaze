@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Voce morreu!!!
+  m_text: tempo esgotado
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f772a527b122fa64081bdd0cea8551c7, type: 2}
   m_sharedMaterial: {fileID: 4512840312572465980, guid: f772a527b122fa64081bdd0cea8551c7, type: 2}
