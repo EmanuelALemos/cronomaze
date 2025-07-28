@@ -9,6 +9,7 @@ TagManager:
   - Pillar
   - Tomb
   - medkit
+  - pontosDePatrulha
   layers:
   - Default
   - TransparentFX

@@ -1,11 +1,14 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class cronometroScript : MonoBehaviour
 {
     public TextMeshProUGUI textoCronometro;
-    public float tempoRestante = 600f;
+    public TextMeshProUGUI textoFinal;
+    float tempoRestante = 600f;
     public bool contando = true;
+    public movimentacaoScript movimentacaoJogador;
 
     // Update is called once per frame
     void Update()
@@ -32,6 +35,7 @@ public class cronometroScript : MonoBehaviour
 
     void TempoEsgotado(){
         contando = false;
+        SceneManager.LoadScene("acabouTempo");
     }
 
     public void PausarCronometro(){
