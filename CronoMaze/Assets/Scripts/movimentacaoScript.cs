@@ -20,12 +20,16 @@ public class movimentacaoScript : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         status = GetComponent<statusJogadorScript>();
         posicaoInicial = transform.position;
+        posicaoSalva =  posicaoInicial;
     }
 
     // Update is called once per frame
     void Update()
     {
         if(!podeMover) return;
+        if(salvouPosicao == false){
+            posicaoSalva = posicaoInicial;
+        }
         if(Input.GetKey(KeyCode.A)){
             // this.gameObject.transform.position = this.gameObject.transform.position + Vector3.left * velocidade;
             this.gameObject.transform.Rotate(Vector3.up,-1f);
@@ -47,13 +51,13 @@ public class movimentacaoScript : MonoBehaviour
             // this.gameObject.transform.position += Vector3.forward * velocidade; 
             transform.position += cameraForward * velocidade;
         }
-        if(transform.position.y < 0 && caiu == false && salvouPosicao == true){
+        if (transform.position.y > 0.5f){
+            caiu = false;
+        }
+        if(transform.position.y < 0 && caiu == false){
             status.removeVida();
             transform.position = posicaoSalva;
             caiu = true;
-        }
-        if(Input.GetKey(KeyCode.Escape)){
-            SceneManager.LoadScene("jogoPausadoScene");
         }
     }
 
