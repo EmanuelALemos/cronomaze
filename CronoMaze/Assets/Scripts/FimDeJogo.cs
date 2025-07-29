@@ -3,7 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class FimDeJogo : MonoBehaviour
 {
-    public void Sobreviveu(){
-        SceneManager.LoadScene("FimDeJogo");
+    private void OnTriggerEnter(Collider other){
+        if(other.gameObject.tag.Equals("Player")){
+            SceneManager.LoadScene("parabensScene");
+        }
     }
 }
