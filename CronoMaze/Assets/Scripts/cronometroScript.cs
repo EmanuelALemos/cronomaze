@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class cronometroScript : MonoBehaviour
 {
     public TextMeshProUGUI textoCronometro;
-    public TextMeshProUGUI textoFinal;
     float tempoRestante = 600f;
     public bool contando = true;
     public movimentacaoScript movimentacaoJogador;
