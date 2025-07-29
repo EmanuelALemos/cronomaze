@@ -27647,7 +27647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5ad5efb3c8fbb904cace64f74c95762d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -21.87
+      value: -22.66
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5ad5efb3c8fbb904cace64f74c95762d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -43635,8 +43635,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dec4d3a67ccddf49b93fb7c3eccff3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barraVida: {fileID: 0}
-  vidaJogadorTexto: {fileID: 0}
+  barraVida: {fileID: 955379653}
+  vidaJogadorTexto: {fileID: 1794157090}
 --- !u!65 &1283889365
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48289,7 +48289,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 5ad5efb3c8fbb904cace64f74c95762d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.81
+      value: 22.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5ad5efb3c8fbb904cace64f74c95762d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -62745,7 +62745,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1788583750}
   m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -63735,7 +63735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5ad5efb3c8fbb904cace64f74c95762d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.39
+      value: 7.86
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5ad5efb3c8fbb904cace64f74c95762d, type: 3}
       propertyPath: m_LocalRotation.w
