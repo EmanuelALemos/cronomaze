@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/fase2.unity
     guid: e1f302176294e87e2813e40fc34ba155
   - enabled: 1
+    path: Assets/Scenes/fase3.unity
+    guid: d45f332540f73464583fe1c9e1dc5d2e
+  - enabled: 1
     path: Assets/Scenes/morreuScene.unity
     guid: 7091ef60c937124448533d622b0a3693
   - enabled: 1
@@ -26,9 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/jogoPausadoScene.unity
     guid: 830231ee72d197448bd781c195881221
-  - enabled: 1
-    path: Assets/Scenes/fase3.unity
-    guid: d45f332540f73464583fe1c9e1dc5d2e
   - enabled: 1
     path: Assets/Scenes/parabensScene.unity
     guid: 1169f73b56bcaff4eb6d3a9e5b1a5df6
